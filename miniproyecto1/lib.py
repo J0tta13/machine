@@ -1,12 +1,15 @@
 import numpy as np
 
 
+
 def load_data(sub_sample=True):
     """CArga los datos y convierte al sistema adecuado"""
     path = "altura_peso.csv"
+
     data = np.genfromtxt(path, delimiter=",", skip_header=1, usecols=[1, 2])
     height = data[:, 0]
     weight = data[:, 1]
+
     gender = np.genfromtxt(
         path,
         delimiter=",",
